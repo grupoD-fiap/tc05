@@ -1,0 +1,202 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: #0460D9;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 20px;
+}
+
+.navbar-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: auto;
+}
+
+.user-icon {
+    margin-left: 40px;
+}
+
+.user-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.header {
+    padding: 80px 15px 20px;
+    background-color: #0476D9;
+    border-bottom: 1px solid #ccc;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+#createMemberBtn {
+    background-color: #F29C50; 
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+#createMemberBtn i {
+    font-size: 20px;
+}
+
+.membersGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 15px;
+}
+
+.member-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 1px 2px 5px #5EADF2;
+    position: relative;
+}
+
+.member-card h3 {
+    margin-top: 0;
+}
+
+.member-card p {
+    margin: 10px 0;
+}
+
+.member-card .actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px; 
+}
+
+.member-card button {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.member-card .edit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.member-card .delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.member-card .edit i,
+.member-card .delete i {
+    margin-right: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(250, 247, 247, 0.4);
+    color: white;
+    gap: 10px;
+}
+
+.modal-content {
+    background-color: #0476D9;
+    margin: 15% auto;
+    margin-bottom: 15px;
+    padding: 20px;
+    gap: 5px;
+    border: 1px solid rgba(250, 247, 247, 0.4);
+    width: 80%;
+    max-width: 400px;
+    border-radius: 15px;
+}
+
+.modal-content label,
+.modal-content input {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="number"] {
+    width: 300px;
+}
+
+.modal-content button {
+    margin-top: 10px;
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.logout-button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.logout-button:hover {
+    background-color: #c9302c;
+}

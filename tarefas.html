@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gestão de Tarefas</title>
+        <link rel="stylesheet" href="tarefas_styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-messaging.js"></script>
+    </head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-brand">TaskManager</div>
+            <a href="gestao_colaboradores.html" class="navbar-link">Gestão de Colaboradores</a>
+        </div>
+        <div class="user-icon">
+            <img src="user-icon.jpeg" alt="Usuário Logado">
+        </div>
+        </div>
+        <button id="logoutBtn" class="logout-button">Sair</button> <!-- Botão de Sair -->
+        </div>
+    </nav>
+
+    <!-- Filtros e título fixos -->
+    <div class="header">
+        <h1>Gestão de Tarefas</h1>
+        <div class="filters">
+            <select id="statusFilter">
+                <option value="">Todos os Status</option>
+                <option value="Pendente">Pendente</option>
+                <option value="Em Andamento">Em Andamento</option>
+                <option value="Concluída">Concluída</option>
+            </select>
+            <select id="priorityFilter">
+                <option value="">Todas as Prioridades</option>
+                <option value="Alta">Alta</option>
+                <option value="Média">Média</option>
+                <option value="Baixa">Baixa</option>
+            </select>
+            <select id="memberFilter">
+                <option value="">Todos os Colaboradores</option>
+                <!-- Dinâmico: Colaboradores serão adicionados aqui via JavaScript -->
+            </select>
+            <button id="createTaskBtn">
+                <i class="fas fa-plus"></i> Criar Tarefa
+            </button>            
+        </div>
+    </div>
+
+    <!-- Grid de Tarefas -->
+    <div id="taskGrid" class="task-grid">
+        <!-- Cards das tarefas serão gerados dinamicamente aqui -->
+    </div>
+
+    <!-- Modal para Criar/Editar Tarefa -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Criar Tarefa</h2>
+            <form class="form" id="taskForm">
+                <input type="hidden" id="taskId">
+                <label for="description">Descrição:</label>
+                <input type="text" id="description" required>
+                <label for="dueDate">Prazo:</label>
+                <input type="date" id="dueDate" required>
+                <br>
+                <label>Prioridade:</label>
+                <div class="priority-buttons" id="priority">
+                    <label>
+                        <input type="radio" name="priority" value="Alta" required> Alta
+                    </label>
+                    <label>
+                        <input type="radio" name="priority" value="Média" required> Média
+                    </label>
+                    <label>
+                        <input type="radio" name="priority" value="Baixa" required> Baixa
+                    </label>
+                </div>
+                <label for="assignedTo">Atribuir a:</label>
+                <select id="assignedTo" required>
+                    <!-- Dinâmico: Colaboradores serão adicionados aqui via JavaScript -->
+                </select>
+                <br>
+                <label for="estimatedTime">Tempo Estimado (Horas):</label>
+                <input type="number" id="estimatedTime" required>
+                <br>
+                <label for="status">Status:</label>
+                <select id="status" required>
+                    <option value="Pendente">Pendente</option>
+                    <option value="Em Andamento">Em Andamento</option>
+                    <option value="Concluída">Concluída</option>
+                </select>
+                <br>
+                <button type="submit" id="saveTaskBtn">Salvar Tarefa</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="tarefas_script.js"></script>
+    <script src="notification.js"></script>
+    
+</body>
+</html>
