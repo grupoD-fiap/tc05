@@ -25,7 +25,19 @@ Este é um projeto de gestão de tarefas e colaboradores desenvolvido como parte
 - `tarefas_script.js`: Script JavaScript para gerenciar tarefas.
 - `gestao_colaboradores_styles.css`: Estilos CSS para a página de colaboradores.
 - `tarefas_styles.css`: Estilos CSS para a página de tarefas.
+- `notification.js`: Logica para receber a notificação na pag web.
+- `firebase-messaging-sw.ks`: Logica para receber a notificação no dispositivo.
+- `funcition/index.html`: logica de envio de notificação via firebase function
 - `package.json`: Gerenciamento de dependências do projeto.
+
+## pacotes via node
+    npm init -y
+    npm i -D firebase-tools
+    npx firebase login
+    npx firebase experiments:enable webframeworks
+    npx firebase init hosting
+    npm install firebase
+
 
 ## Credenciais do Firebase
     apiKey: "AIzaSyC8evOJBLJ7g4lpW5CBL3WKn_rBg83m4Gk",
