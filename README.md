@@ -27,7 +27,7 @@ Este é um projeto de gestão de tarefas e colaboradores desenvolvido como parte
 - `tarefas_styles.css`: Estilos CSS para a página de tarefas.
 - `notification.js`: Logica para receber a notificação na pag web.
 - `firebase-messaging-sw.ks`: Logica para receber a notificação no dispositivo.
-- `funcition/index.html`: logica de envio de notificação via firebase function
+- `funcition/index.js`: logica de envio de notificação via firebase function
 - `package.json`: Gerenciamento de dependências do projeto.
 
 ## pacotes via node
